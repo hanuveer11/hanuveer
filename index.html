@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chatroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Private Chatroom</h1>
+            <p>Create or join a chat room with your own unique code!</p>
+        </header>
+        <main>
+            <!-- Room Selection -->
+            <div id="room-selection">
+                <input id="room-input" placeholder="Enter room code..." required>
+                <button id="create-room" class="animated-button">Create Room</button>
+                <button id="join-room" class="animated-button">Join Room</button>
+            </div>
+
+            <!-- Chat Interface -->
+            <div id="chat-window" style="display: none;">
+                <ul id="messages"></ul>
+                <form id="chat-form">
+                    <input id="message-input" placeholder="Type your message..." autocomplete="off" required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
